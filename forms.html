@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #000000;
+        }
+        .font-times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-black font-times">
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl transform transition-all hover:scale-105 duration-300 font-times">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8 tracking-tight font-times">Create an Account</h1>
+        <form id="registrationForm" class="space-y-6 font-times">
+
+            <!-- Name Fields -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700 font-times">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times" placeholder="John">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700 font-times">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times" placeholder="Doe">
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 font-times">Email Address</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times" placeholder="you@example.com">
+            </div>
+
+            <!-- Password Field -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 font-times">Password</label>
+                <input type="password" id="password" name="password" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times" placeholder="••••••••">
+            </div>
+
+            <!-- Date of Birth (date input) -->
+            <div>
+                <label for="dob" class="block text-sm font-medium text-gray-700 font-times">Date of Birth</label>
+                <input type="date" id="dob" name="dob" class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times">
+            </div>
+
+            <!-- Gender (radio buttons) -->
+            <div>
+                <span class="block text-sm font-medium text-gray-700 font-times">Gender</span>
+                <div class="mt-2 space-x-6">
+                    <label class="inline-flex items-center font-times">
+                        <input type="radio" name="gender" value="male" class="form-radio text-green-600 h-5 w-5 rounded-full border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <span class="ml-2 text-gray-700">Male</span>
+                    </label>
+                    <label class="inline-flex items-center font-times">
+                        <input type="radio" name="gender" value="female" class="form-radio text-green-600 h-5 w-5 rounded-full border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <span class="ml-2 text-gray-700">Female</span>
+                    </label>
+                    <label class="inline-flex items-center font-times">
+                        <input type="radio" name="gender" value="other" class="form-radio text-green-600 h-5 w-5 rounded-full border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <span class="ml-2 text-gray-700">Other</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Interests (checkboxes) -->
+            <div>
+                <span class="block text-sm font-medium text-gray-700 font-times">Interests</span>
+                <div class="mt-2 space-y-2">
+                    <div class="flex items-center font-times">
+                        <input type="checkbox" id="coding" name="interests" value="coding" class="form-checkbox text-green-600 h-5 w-5 rounded border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <label for="coding" class="ml-2 text-gray-700">Coding</label>
+                    </div>
+                    <div class="flex items-center font-times">
+                        <input type="checkbox" id="gaming" name="interests" value="gaming" class="form-checkbox text-green-600 h-5 w-5 rounded border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <label for="gaming" class="ml-2 text-gray-700">Gaming</label>
+                    </div>
+                    <div class="flex items-center font-times">
+                        <input type="checkbox" id="reading" name="interests" value="reading" class="form-checkbox text-green-600 h-5 w-5 rounded border-gray-300 focus:ring-2 focus:ring-green-500">
+                        <label for="reading" class="ml-2 text-gray-700">Reading</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Country (dropdown select) -->
+            <div>
+                <label for="country" class="block text-sm font-medium text-gray-700 font-times">Country</label>
+                <select id="country" name="country" class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times">
+                    <option value="" disabled selected>Select a country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </div>
+
+            <!-- Bio (textarea) -->
+            <div>
+                <label for="bio" class="block text-sm font-medium text-gray-700 font-times">Short Bio</label>
+                <textarea id="bio" name="bio" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200 font-times" placeholder="Tell us about yourself..."></textarea>
+            </div>
+
+            <!-- Terms & Conditions (checkbox) -->
+            <div class="flex items-start font-times">
+                <input id="terms" name="terms" type="checkbox" required class="h-5 w-5 text-green-600 rounded border-gray-300 focus:ring-2 focus:ring-green-500">
+                <label for="terms" class="ml-3 block text-sm text-gray-700">
+                    I agree to the <a href="#" class="text-green-600 hover:text-green-800 font-medium">Terms of Service</a>.
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-bold text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transform transition-transform duration-200 hover:scale-105 font-times">
+                    Register
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Create a FormData object from the form
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                // For checkboxes with the same name, collect all values into an array
+                if (key === 'interests') {
+                    if (!data[key]) {
+                        data[key] = [];
+                    }
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            });
+
+            // Log the data to the console for demonstration
+            console.log("Form Data Submitted:", data);
+
+            // You could send this data to a server using fetch() here
+            // e.g., fetch('/api/register', { method: 'POST', body: JSON.stringify(data) })
+        });
+    </script>
+</body>
+</html>
